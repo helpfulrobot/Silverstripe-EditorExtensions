@@ -5,7 +5,8 @@
  *
  * Modified the HTML Editor Link Form to allow custom link tpes
  */
-class LinkFormExtension extends DataExtension {
+class LinkFormExtension extends DataExtension
+{
 
     public function updateLinkForm(Form $form)
     {
@@ -20,12 +21,10 @@ class LinkFormExtension extends DataExtension {
         $linkType->setSource($types);
 
         $fields->insertAfter(
-            new TextField('tel',_t('EditorExtensions.TELNUMBER', 'Phone Number')),
+            new TextField('tel', _t('EditorExtensions.TELNUMBER', 'Phone Number')),
             'file'
         );
 
         return $form;
-
     }
-
-} 
+}
